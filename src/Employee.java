@@ -1,8 +1,8 @@
 public class Employee {
-    private String name;
-    private String email;
-    private int age;
-    private double salary;
+    protected String name;
+    protected String email;
+    protected int age;
+    protected double salary;
 
     public Employee(String name, String email, int age, double salary) {
         setName(name);
@@ -16,7 +16,7 @@ public class Employee {
     }
     public void setEmail(String email) {
         if (email.length() < 4) {
-            System.err.println("A valid email is needed");
+            throw new IllegalArgumentException("A valid email is needed");
         } else {
             this.email = email;
         }
