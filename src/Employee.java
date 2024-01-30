@@ -15,7 +15,7 @@ public class Employee {
         this.name = name;
     }
     public void setEmail(String email) {
-        if (email.length() < 4) {
+        if (!email.contains("@")) {
             throw new IllegalArgumentException("A valid email is needed");
         } else {
             this.email = email;
